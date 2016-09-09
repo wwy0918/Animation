@@ -31,6 +31,13 @@
     [self blue];
     [self contents];
     [self rotation];
+    
+    NSArray *array = [[NSArray alloc]initWithObjects:@"beijing",@"shanghai",@"guangzou",@"wuhan", nil];
+    NSString *string = @"ang";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",string];
+    NSLog(@"%@ -- %d",[array filteredArrayUsingPredicate:pred],[pred evaluateWithObject:array]);
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -57,7 +64,7 @@
     anim2.fillMode = kCAFillModeBackwards;
     anim2.repeatCount = HUGE_VALF;
     anim2.autoreverses = YES;
-    [_pinkView.layer addAnimation:anim2 forKey:@"green"];
+    [_pinkView.layer addAnimation:anim2 forKey:@"Pink1"];
 }
 
 - (void)green {
@@ -70,6 +77,16 @@
     anim.repeatCount = HUGE_VALF;
     anim.autoreverses = YES;
     [_greenView.layer addAnimation:anim forKey:@"green"];
+    
+    CABasicAnimation *anim1 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    anim1.fromValue = @1.0;
+    anim1.toValue = @0.5;
+    anim1.duration = 1.0;
+    anim1.removedOnCompletion = NO;
+    anim1.fillMode = kCAFillModeBackwards;
+    anim1.repeatCount = HUGE_VALF;
+    anim1.autoreverses = YES;
+    [_greenView.layer addAnimation:anim1 forKey:@"green1"];
 }
 
 - (void)orange {

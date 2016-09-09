@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
 //    CAAnimationGroup
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self animations];
@@ -43,7 +44,7 @@
     color.fromValue = (__bridge id _Nullable)([UIColor greenColor].CGColor);
     color.toValue = (__bridge id _Nullable)([UIColor redColor].CGColor);
     color.duration = 2.0;
-    
+      
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[position,color,transform];
     group.repeatCount = HUGE_VALF;
