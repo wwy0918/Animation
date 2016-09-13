@@ -44,6 +44,7 @@
 		6E379F4C1D794FC50040C171 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		6E379F4D1D794FC50040C171 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
 		6E379F4E1D794FC50040C171 /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
+		6E6710801D865C6E00D50195 /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 			children = (
 				6E379DA91D7918FF0040C171 /* AppDelegate.h */,
 				6E379DAA1D7918FF0040C171 /* AppDelegate.m */,
+				6E6710801D865C6E00D50195 /* Protocol.h */,
 				6E379DCF1D794F450040C171 /* 资源 */,
 				6E379DBD1D791C4E0040C171 /* 基础动画 */,
 				6E379DBF1D791CC20040C171 /* 关键帧动画 */,
@@ -379,6 +381,7 @@
 				6E379DBC1D7918FF0040C171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
