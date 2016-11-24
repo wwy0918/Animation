@@ -29,7 +29,8 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         
-        FlowLayout2 *layout = [[FlowLayout2 alloc] init];
+        FlowLayout *layout = [[FlowLayout alloc] init];
+//        FlowLayout2 *layout = [[FlowLayout2 alloc] init];
 //        CircleLayout *layout = [[CircleLayout alloc] init];
         
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
