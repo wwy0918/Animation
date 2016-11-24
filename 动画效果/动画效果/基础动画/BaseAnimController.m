@@ -31,13 +31,6 @@
     [self blue];
     [self contents];
     [self rotation];
-    
-    NSArray *array = [[NSArray alloc]initWithObjects:@"beijing",@"shanghai",@"guangzou",@"wuhan", nil];
-    NSString *string = @"ang";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",string];
-    NSLog(@"%@ -- %d",[array filteredArrayUsingPredicate:pred],[pred evaluateWithObject:array]);
-    
-    
 }
 
 - (void)viewDidLoad {
@@ -47,7 +40,7 @@
 - (void)pink {
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(_pinkView.center.x, _pinkView.center.y)];
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(SYS_WIDTH-60, 60)];
+    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(60, 60)];
     anim.duration = 2.0;
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
@@ -64,7 +57,7 @@
     anim2.fillMode = kCAFillModeBackwards;
     anim2.repeatCount = HUGE_VALF;
     anim2.autoreverses = YES;
-    [_pinkView.layer addAnimation:anim2 forKey:@"Pink1"];
+//    [_pinkView.layer addAnimation:anim2 forKey:@"Pink1"];
 }
 
 - (void)green {
@@ -92,12 +85,12 @@
 - (void)orange {
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
     anim.fromValue = [NSNumber numberWithFloat:0];
-    anim.toValue = [NSNumber numberWithFloat:M_PI*2];
-    anim.duration = 2.0;
+    anim.toValue = [NSNumber numberWithFloat:M_PI];
+    anim.duration = 1.0;
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
-    anim.repeatCount = HUGE_VALF;
-    anim.autoreverses = YES;
+//    anim.repeatCount = HUGE_VALF;
+//    anim.autoreverses = YES;
     
     [_orangeView.layer addAnimation:anim forKey:@"orange"];
 }
@@ -127,14 +120,18 @@
 }
 
 - (void)rotation {
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform"];
-    anim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2+M_PI_4, 1, 1, 0)];
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//    anim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2+M_PI_4, 1, 1, 0)];
+    anim.toValue = @(M_PI*2);
     anim.duration = 2.0;
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
     anim.repeatCount = HUGE_VALF;
-    anim.autoreverses = YES;
+//    anim.autoreverses = YES;
     [_rotationView.layer addAnimation:anim forKey:@"rotation"];
+    
+    _rotationView.layer.anchorPoint = CGPointMake(0.5, 0);
+    _rotationView.layer.anchorPointZ = 1;
 }
 
 @end

@@ -58,9 +58,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E073D0C1DADD15F0093867B /* AnimationCocoa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AnimationCocoa;
+			sourceTree = "<group>";
+		};
 		6E379D9A1D7918FF0040C171 = {
 			isa = PBXGroup;
 			children = (
+				6E073D0C1DADD15F0093867B /* AnimationCocoa */,
 				6E379DA51D7918FF0040C171 /* 动画效果 */,
 				6E379DA41D7918FF0040C171 /* Products */,
 			);

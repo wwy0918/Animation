@@ -35,16 +35,16 @@
     transform.repeatCount = HUGE_VALF;
     transform.autoreverses = YES;
     
+    
     CABasicAnimation *position = [CABasicAnimation animationWithKeyPath:@"position"];
-    NSLog(@"%@",[NSValue valueWithCGPoint:_greenView.layer.position]);
     position.toValue = [NSValue valueWithCGPoint:CGPointMake(SYS_WIDTH-60, 100)];
-    position.duration = 2.0;
+    
     
     CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     color.fromValue = (__bridge id _Nullable)([UIColor greenColor].CGColor);
     color.toValue = (__bridge id _Nullable)([UIColor redColor].CGColor);
-    color.duration = 2.0;
-      
+
+    
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[position,color,transform];
     group.repeatCount = HUGE_VALF;

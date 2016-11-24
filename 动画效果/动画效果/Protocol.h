@@ -10,6 +10,6 @@
 
 @protocol Protocol <NSObject>
 
-@property 
+
 
 @end
