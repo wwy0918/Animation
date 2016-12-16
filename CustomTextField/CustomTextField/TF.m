@@ -72,6 +72,10 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    return YES;
+}
+
 - (void)setFont:(UIFont *)font {
     _font = font;
     for (UITextField *tf in self.textFields) {

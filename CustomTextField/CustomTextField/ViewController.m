@@ -42,6 +42,6 @@
     NSLog(@" text = %@ ",_tf.text);
 }
 
-
+- (UIStatusBarStyle)preferredStatusBarStyle {return 0;}
 
 @end
