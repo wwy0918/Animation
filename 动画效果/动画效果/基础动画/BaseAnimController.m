@@ -130,8 +130,8 @@
 //    anim.autoreverses = YES;
     [_rotationView.layer addAnimation:anim forKey:@"rotation"];
     
-    _rotationView.layer.anchorPoint = CGPointMake(0.5, 0);
-    _rotationView.layer.anchorPointZ = 1;
+//    _rotationView.layer.anchorPoint = CGPointMake(0.5, 0);
+//    _rotationView.layer.anchorPointZ = 1;
 }
 
 @end

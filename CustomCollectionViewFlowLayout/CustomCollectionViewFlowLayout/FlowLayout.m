@@ -12,14 +12,17 @@
 - (instancetype)init {
     if (self = [super init]) {
         //设置每个item的大小  这个属性最好在控制器中设置
+        CGSize size = [UIScreen mainScreen].bounds.size;
         self.itemSize = CGSizeMake(150, 150);
+        CGSizeMake(size.width-80, size.width-20);
+        
         //设置滚动方向
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         //设置内边距
         CGFloat insert =(self.collectionView.frame.size.width-self.itemSize.width)/2;
         self.sectionInset =UIEdgeInsetsMake(0, insert, 0, insert);
         //设置每行的最小间距
-        self.minimumLineSpacing = 50.0;
+        self.minimumLineSpacing = 0.0;
     }
     return self;
 }
