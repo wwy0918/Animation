@@ -42,11 +42,12 @@
     _slayer.strokeColor = [UIColor blueColor].CGColor;
     _slayer.lineWidth = 5;
     _slayer.strokeEnd = 0.0f;
+    [self.view.layer addSublayer:_slayer];
+
     UIBezierPath *bezier = [UIBezierPath bezierPath];
     [bezier addArcWithCenter:CGPointMake(40, 40) radius:40 startAngle:0 endAngle:M_PI*2 clockwise:YES];
     _slayer.path = bezier.CGPath;
-    [self.view.layer addSublayer:_slayer];
-    
+
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(run) userInfo:nil repeats:YES];
 }
 
