@@ -65,7 +65,7 @@
     //初相
     _waveX = 0;
     //x轴移动速度
-    _waveMoveSpeed = _wavePalstance * 5;
+    _waveMoveSpeed = _wavePalstance * 2;
     //以屏幕刷新速度为周期刷新曲线的位置
     _disPlayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateWave:)];
     [_disPlayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];

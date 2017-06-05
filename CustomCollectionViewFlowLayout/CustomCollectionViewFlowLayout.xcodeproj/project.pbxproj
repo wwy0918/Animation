@@ -17,6 +17,8 @@
 		6E43B2F71DE57CA5002380C4 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E43B2F61DE57CA5002380C4 /* FlowLayout.m */; };
 		6E43B2FA1DE59515002380C4 /* FlowLayout2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E43B2F91DE59515002380C4 /* FlowLayout2.m */; };
 		6E43B2FD1DE5991A002380C4 /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E43B2FC1DE5991A002380C4 /* CircleLayout.m */; };
+		6E5BE83A1EE0226400FDD554 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BE8381EE0226400FDD554 /* CollectionViewCell.m */; };
+		6E5BE83B1EE0226400FDD554 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BE8391EE0226400FDD554 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		6E43B2F91DE59515002380C4 /* FlowLayout2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout2.m; sourceTree = "<group>"; };
 		6E43B2FB1DE5991A002380C4 /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
 		6E43B2FC1DE5991A002380C4 /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
+		6E5BE8371EE0226400FDD554 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		6E5BE8381EE0226400FDD554 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		6E5BE8391EE0226400FDD554 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 				6E43B2EC1DE57C10002380C4 /* LaunchScreen.storyboard */,
 				6E43B2EF1DE57C10002380C4 /* Info.plist */,
 				6E43B2DE1DE57C10002380C4 /* Supporting Files */,
+				6E5BE8371EE0226400FDD554 /* CollectionViewCell.h */,
+				6E5BE8381EE0226400FDD554 /* CollectionViewCell.m */,
+				6E5BE8391EE0226400FDD554 /* CollectionViewCell.xib */,
 			);
 			path = CustomCollectionViewFlowLayout;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			files = (
 				6E43B2EE1DE57C10002380C4 /* LaunchScreen.storyboard in Resources */,
 				6E43B2EB1DE57C10002380C4 /* Assets.xcassets in Resources */,
+				6E5BE83B1EE0226400FDD554 /* CollectionViewCell.xib in Resources */,
 				6E43B2E91DE57C10002380C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +186,7 @@
 				6E43B2E31DE57C10002380C4 /* AppDelegate.m in Sources */,
 				6E43B2E01DE57C10002380C4 /* main.m in Sources */,
 				6E43B2FA1DE59515002380C4 /* FlowLayout2.m in Sources */,
+				6E5BE83A1EE0226400FDD554 /* CollectionViewCell.m in Sources */,
 				6E43B2FD1DE5991A002380C4 /* CircleLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

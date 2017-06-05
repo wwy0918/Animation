@@ -11,6 +11,8 @@
 #import "CircleLayout.h"
 #import "ViewController.h"
 
+#import "CollectionViewCell.h"
+
 @interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView  *collectionView;
 @end
@@ -33,23 +35,23 @@
 //        FlowLayout2 *layout = [[FlowLayout2 alloc] init];
 //        CircleLayout *layout = [[CircleLayout alloc] init];
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 160) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"1"];
+        
+        _collectionView.backgroundColor = [UIColor redColor];
+//        [_collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"CollectionViewCell"];
+        [_collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCell"];
     }
     return _collectionView;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"1" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
-    cell.backgroundView = [UIView new];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
     return cell;
 }
 
